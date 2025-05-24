@@ -3,6 +3,7 @@ import { Movie } from '../types/movie';
 
 const API_URL = 'https://api.themoviedb.org/3/search/movie';
 const API_TOKEN = import.meta.env.VITE_TMDB_TOKEN;
+console.log('VITE_TMDB_TOKEN:', API_TOKEN);
 
 interface FetchMoviesResponse {
   results: Movie[];

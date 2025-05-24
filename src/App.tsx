@@ -38,6 +38,7 @@ const App: React.FC = () => {
     } finally {
       setLoading(false);
     }
+    
   };
 
   return (
