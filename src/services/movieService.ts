@@ -2,8 +2,8 @@ import axios from 'axios';
 import { Movie } from '../types/movie';
 
 const API_URL = 'https://api.themoviedb.org/3/search/movie';
-const API_TOKEN = import.meta.env.VITE_TMDB_TOKEN;
-console.log('VITE_TMDB_TOKEN:', API_TOKEN);
+const VITE_TMDB_TOKEN = import.meta.env.VITE_TMDB_TOKEN;
+
 
 interface FetchMoviesResponse {
   results: Movie[];
@@ -16,7 +16,7 @@ export const fetchMovies = async (query: string): Promise<Movie[]> => {
       language: 'en-US',
     },
     headers: {
-      Authorization: `Bearer ${API_TOKEN}`,
+      Authorization: `Bearer ${VITE_TMDB_TOKEN}`,
     },
   };
 
