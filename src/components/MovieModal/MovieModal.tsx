@@ -1,20 +1,14 @@
-import React, { useEffect } from 'react';
+import  { useEffect } from 'react';
 import css from './MovieModal.module.css';
+import { Movie } from '../../types/movie'
 
-interface Movie {
-  title: string;
-  backdrop_path: string;
-  overview: string;
-  release_date: string;
-  vote_average: number;
-}
 
 interface Props {
   movie: Movie;
   onClose: () => void;
 }
 
-const MovieModal: React.FC<Props> = ({ movie, onClose }) => {
+const MovieModal  = ({ movie, onClose }: Props) => {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {

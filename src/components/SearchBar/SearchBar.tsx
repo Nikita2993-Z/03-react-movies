@@ -7,15 +7,15 @@ interface SearchBarProps {
   onSubmit: (query: string) => void;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ onSubmit }) => {
+const SearchBar  = ({ onSubmit }: SearchBarProps) => {
   const [query, setQuery] = useState<string>('');
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setQuery(e.target.value);
+  const handleChange = (evt: ChangeEvent<HTMLInputElement>) => {
+    setQuery(evt.target.value);
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = (evt: FormEvent<HTMLFormElement>) => {
+    evt.preventDefault();
     const trimmedQuery = query.trim();
 
     if (trimmedQuery === '') {

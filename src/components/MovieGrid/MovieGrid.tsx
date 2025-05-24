@@ -1,16 +1,16 @@
-import React from 'react';
+
 import css from './MovieGrid.module.css';
-import { Movie } from '../../types/movie'; // путь скорректируй, если отличается
+import { Movie } from '../../types/movie'; 
 
 interface MovieGridProps {
   movies: Movie[];
   onSelect: (movie: Movie) => void;
 }
 
-const MovieGrid: React.FC<MovieGridProps> = ({ movies, onSelect }) => {
+const MovieGrid = ({ movies, onSelect }: MovieGridProps) => {
   if (!movies.length) return null;
 
-  return (
+  return ( 
     <ul className={css.grid}>
       {movies.map(movie => (
         <li key={movie.id} onClick={() => onSelect(movie)}>

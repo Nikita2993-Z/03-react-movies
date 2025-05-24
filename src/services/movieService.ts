@@ -21,5 +21,8 @@ export const fetchMovies = async (query: string): Promise<Movie[]> => {
   };
 
   const { data } = await axios.get<FetchMoviesResponse>(API_URL, config);
+  // console.log(data.results);
   return data.results;
+  
+  
 };

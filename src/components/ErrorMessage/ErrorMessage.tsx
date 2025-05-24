@@ -1,7 +1,7 @@
-import React from 'react';
+
 import css from './ErrorMessage.module.css';
 
-const ErrorMessage: React.FC = () => (
+const ErrorMessage = () => (
   <p className={css.text}>There was an error, please try again...</p>
 );
 

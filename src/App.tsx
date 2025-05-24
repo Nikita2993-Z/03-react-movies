@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import toast from 'react-hot-toast';
 
 import SearchBar from './components/SearchBar/SearchBar';
@@ -10,7 +10,7 @@ import MovieModal from './components/MovieModal/MovieModal';
 import { fetchMovies } from './services/movieService';
 import { Movie } from './types/movie';
 
-const App: React.FC = () => {
+const App = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
